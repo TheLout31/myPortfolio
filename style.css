@@ -327,6 +327,62 @@ section {
     margin-bottom: 2rem;
 }
 
+/* .article-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  transition: filter 0.4s ease;
+} */
+
+/* Overlay */
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.project-overlay h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-overlay p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Hover effect */
+.article-container:hover .project-img {
+  filter: blur(5px) brightness(0.7);
+}
+
+.article-container:hover .project-overlay {
+  opacity: 1;
+}
+
+
+
+
+
 .article-container {
     display: flex;
     text-align: initial;
@@ -355,8 +411,11 @@ article {
 
 .project-img {
     border-radius: 2rem;
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: auto;         /* removes fixed zoomed height */
+  max-height: 600px;    /* optional limit */
+  object-fit: cover;
+    
 }
 
 .project-title {
