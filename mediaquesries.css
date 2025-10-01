@@ -1,58 +1,95 @@
-@media screen and (max-width:1400px) {
-    #rpofile {
-        height: 83vh;
-        margin-bottom: 6rem;
-    }
+@media screen and (max-width: 1400px) {
+  #rpofile {
+    height: 83vh;
+    margin-bottom: 6rem;
+  }
 
-    .about-containers {
-        flex-wrap: wrap;
-    }
+  .about-containers {
+    flex-wrap: wrap;
+  }
 }
 
-@media screen and (max-width:1200px) {
-    #desktop-nav {
-        display: none;
-    }
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
 
-    #hamburger-nav {
-        display: flex;
-    }
+  #hamburger-nav {
+    display: flex;
+  }
 
-    #experience,
-    .experience-details-container {
-        margin-top: 2rem;
-    }
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
 
-    #profile,
-    .section-container {
-        display: block;
-    }
+  #profile,
+  .section-container {
+    display: block;
+  }
 
-    .arrow {
-        display: none;
-    }
+  .arrow {
+    display: none;
+  }
 
-    section,
-    .section-container {
-        height: fit-content;
-    }
+  section,
+  .section-container {
+    height: fit-content;
+  }
 
-    section {
-        margin: 0 5%;
-    }
+  section {
+    margin: 0 5%;
+  }
 
-    .section_pic-container {
-        width: 275px;
-        height: 275px;
-        margin: 0 auto 2rem;
-    }
+  .section_pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
 
-    .about-containers {
-        margin-top: 0;
-    }
+  .about-containers {
+    margin-top: 0;
+  }
 }
 
-@media screen and (max-widht:600px) {
+@media screen and (max-width: 600px) {
+  #contact,
+  footer {
+    height: 40vh;
+  }
+
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+
+  article {
+    font-size: 1rem;
+  }
+
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+  .nav-links {
+    flex-direction: column; /* mobile: stack vertically */
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-direction: row; /* now contact switches to row */
+    flex-wrap: wrap;
+  }
+
+  .contact-info-container {
+    margin: 0;
+  }
+}
+
+/* @media screen and (max-width:600px) {
 
     #contact,
     footer {
@@ -74,9 +111,10 @@
     }
 
     .about-containers,.contact-info-upper-container,.btn-container{
+        flex-direction: row;
         flex-wrap: wrap;
     }
     .contact-info-container{
         margin:0
     }
-}
+} */
