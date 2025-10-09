@@ -1,23 +1,27 @@
+/* ----------- Large screens (below 1400px) ----------- */
 @media screen and (max-width: 1400px) {
-  #rpofile {
+  #profile {
     height: 83vh;
     margin-bottom: 6rem;
   }
 
   .about-containers {
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
+/* ----------- Medium screens (below 1200px) ----------- */
 @media screen and (max-width: 1200px) {
+  /* Switch from desktop to mobile nav */
   #desktop-nav {
     display: none;
   }
-
   #hamburger-nav {
     display: flex;
   }
 
+  /* Adjust sections */
   #experience,
   .experience-details-container {
     margin-top: 2rem;
@@ -45,21 +49,39 @@
     width: 275px;
     height: 275px;
     margin: 0 auto 2rem;
+    border-radius: 20rem;
   }
 
   .about-containers {
     margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
   }
 }
 
+/* ----------- Small screens (below 600px) ----------- */
 @media screen and (max-width: 600px) {
+  /* General layout */
+  section {
+    margin: 0 3%;
+  }
+
+  .text-container {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+
   #contact,
   footer {
-    height: 40vh;
+    height: auto;
+    padding-bottom: 2rem;
   }
 
   #profile {
-    height: 83vh;
+    height: auto;
     margin-bottom: 0;
   }
 
@@ -67,54 +89,68 @@
     font-size: 1rem;
   }
 
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-  .nav-links {
-    flex-direction: column; /* mobile: stack vertically */
-    align-items: center;
+  .nav-footer-links {
+    flex-direction: column;
     gap: 1rem;
   }
 
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-direction: row; /* now contact switches to row */
-    flex-wrap: wrap;
+  #footer-nav {
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+  }
+
+  /* footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  } */
+
+  /* Navbar */
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  /* About / Skills containers */
+  .about-containers {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  /* Contact section */
+  .contact-info-upper-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
   }
 
   .contact-info-container {
     margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+  }
+
+   #contact-form {
+    width: 90%; /* fits well within mobile screens */
+    padding: 1rem;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    font-size: 0.95rem;
+  }
+
+
+  /* Buttons */
+  .btn-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 }
 
-/* @media screen and (max-width:600px) {
-
-    #contact,
-    footer {
-        height: 40vh;
-    }
-
-    #profile {
-        height: 83vh;
-        margin-bottom: 0;
-    }
-
-    article {
-        font-size: 1rem;
-    }
-
-    footer nav {
-        height: fit-content;
-        margin-bottom: 2rem;
-    }
-
-    .about-containers,.contact-info-upper-container,.btn-container{
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    .contact-info-container{
-        margin:0
-    }
-} */
