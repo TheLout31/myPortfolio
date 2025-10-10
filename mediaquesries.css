@@ -2,7 +2,8 @@
 @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
-    margin-bottom: 6rem;
+    margin-bottom: 12rem;
+    align-items: center;
   }
 
   .about-containers {
@@ -18,7 +19,10 @@
     display: none;
   }
   #hamburger-nav {
+
     display: flex;
+    background: white;
+    
   }
 
   /* Adjust sections */
@@ -46,10 +50,19 @@
   }
 
   .section_pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 2rem;
     border-radius: 20rem;
+    margin-left: 1rem;
+  }
+
+  .main_pic-container {
+    height: 350px;
+    width: 350px;
+    align-items: center;
+    margin-bottom: 8rem;
+    margin-left: 1rem;
   }
 
   .about-containers {
@@ -69,10 +82,9 @@
   }
 
   .text-container {
-  font-size: 1rem;
-  padding: 0.5rem;
-}
-
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
 
   #contact,
   footer {
@@ -135,7 +147,7 @@
     gap: 0.7rem;
   }
 
-   #contact-form {
+  #contact-form {
     width: 90%; /* fits well within mobile screens */
     padding: 1rem;
   }
@@ -145,7 +157,6 @@
     font-size: 0.95rem;
   }
 
-
   /* Buttons */
   .btn-container {
     flex-direction: column;
@@ -153,4 +164,3 @@
     gap: 1rem;
   }
 }
-

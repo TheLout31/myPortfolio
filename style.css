@@ -7,7 +7,6 @@
 
 body {
   font-family: "Poppins", sans-serif;
-
   scroll-behavior: smooth;
 }
 
@@ -79,49 +78,21 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 24px;
+  height: 22px;
   width: 30px;
   cursor: pointer;
 }
 
 .hamburger-icon span {
   width: 100%;
-  height: 2px;
-  background-color: black;
-  transition: all 0.3 ease-in-out;
+  height: 3px;
+  background-color: #111;
+  border-radius: 5px;
+  transition: all 0.4s ease;
 }
-
-.menu-links {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: white;
-  width: fit-content;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3 ease-in-out;
-}
-
-.menu-links a {
-  display: block;
-  padding: 10px;
-  text-align: center;
-  font-size: 1.5rem;
-  color: black;
-  text-decoration: none;
-  transition: all 0.3 ease-in-out;
-}
-
-.menu-links li {
-  list-style: none;
-}
-
-.menu-links.open {
-  max-height: 300px;
-}
-
+/* Transform to X on open */
 .hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(10px, 5px);
+  transform: rotate(45deg) translateY(8px);
 }
 
 .hamburger-icon.open span:nth-child(2) {
@@ -129,21 +100,49 @@ a:hover {
 }
 
 .hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(10px, -5px);
+  transform: rotate(-45deg) translateY(-8px);
 }
 
-.hamburger-icon span:first-child {
-  transform: none;
+/* Dropdown menu */
+.menu-links {
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease;
+  list-style: none;
+  width: 200px;
+  font-family: "Poppins", sans-serif;
 }
 
-.hamburger-icon span:first-child {
-  opacity: 1;
+/* Open animation */
+.menu-links.open {
+  transform: scaleY(1);
 }
 
-.hamburger-icon span:first-child {
-  transform: none;
+.menu-links li {
+  width: 100%;
 }
 
+.menu-links a {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #111;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu-links a:hover {
+  background: #111;
+  color: #fff;
+}
 /* Profile SECTION */
 
 section {
@@ -320,15 +319,17 @@ section {
 }
 
 .section_pic-container {
-  height: 350px;
-  width: 350px;
+  height: 400px;
+  width: 400px;
   margin: auto 0;
+  margin-right: 2rem;
 }
 
 .main_pic-container {
   height: 400px;
   width: 400px;
   margin: auto 0;
+  align-items: center;
 }
 
 .main-pic {
